@@ -1,5 +1,5 @@
 name: PR actions
-description: Do some stuff on PR state changes
+description: Do some stuff on PR state change
 inputs:
   webhook:
     description: Make webhook for syncing issue state with Notion
