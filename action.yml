@@ -1,0 +1,15 @@
+name: PR actions
+description: Do some stuff on PR state changes
+inputs:
+  webhook:
+    description: Make webhook for syncing issue state with Notion
+    required: true
+  token:
+    description: Read-scoped GitHub token
+    required: true
+  event:
+    description: Should be toJson(github.event) for extracting PR/review state
+    required: true
+runs:
+  using: "node16"
+  main: "dist/index.js"
