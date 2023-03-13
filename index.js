@@ -9,7 +9,7 @@ async function run() {
     const octokit = github.getOctokit(token);
     const event = JSON.parse(core.getInput("event"));
     core.info(github.context.payload);
-    console.log(event)
+    core.info(toJSON(event));
   } catch (error) {
     core.setFailed(error.message);
   }
